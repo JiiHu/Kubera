@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.2.0'
+
 # to fix unknown error
 gem 'rb-readline'
 
@@ -7,6 +9,15 @@ gem 'bootstrap-sass'
 
 group :development do
   gem 'rails_layout'
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
+group :production do
+   gem 'pg'
+   gem 'rails_12factor'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
