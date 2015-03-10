@@ -6,4 +6,5 @@ describe Category do
 
     expect(category.name).to eq("food")
   end
+
 end
