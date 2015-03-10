@@ -1,0 +1,27 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/home/jonnehuo/ruby/kubera/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jonnehuo/ruby/kubera/app/helpers/categories_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jonnehuo/ruby/kubera/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jonnehuo/ruby/kubera/app/helpers/welcome_helper.rb": [
+        1,
+        null
+      ],
+      "/home/jonnehuo/ruby/kubera/app/models/user.rb": [
+        1,
+        null
+      ]
+    },
+    "timestamp": 1425991078
+  }
+}
