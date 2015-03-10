@@ -1,10 +1,15 @@
 language: ruby
-
 rvm:
- - 2.2.0
-
+- 2.2.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
- - bundle exec rake db:test:prepare
- - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: KgGFZtEVOIX9d9AWLPDppTyoWb7IAvl5+3OAqO2Gw8ISPYX1pr7W+3/s23u8qdEhb7UEYgpPWrAnzxLkwWbANECi3XLRQdYwqQG6wASQcfsXsKKRycpkCcgPrLy7QtTZ5On5ibjkstvb7l0ZtnnVIOALH58CNS0eEkC5mds4PBc=
+  app: kubera-app
+  on:
+    repo: JiiHu/Kubera
