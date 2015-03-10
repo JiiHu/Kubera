@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	color: #555;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-weight: 300;
+}
+
+a {
+	transition: all 0.2s linear 0s;
+}
+a:hover {
+	transition: all 0.2s linear 0s;
+}
+
+a:visited {
+	color: #444;
+}
+
+.btn-new {
+	border-width: 3px;
+	background: transparent;
+	color: #444;
+}
+
+.jumbo-front {
+	margin: 0 -15px;
+	background-color: #64d55c;
+	color: #fff;
+}
