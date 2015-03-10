@@ -5,7 +5,10 @@ Rails.application.routes.draw do
 
   resources :users
   
+  resource :session, only: [:new, :create, :delete]
   get 'signup', to: 'users#new'
+  get 'login', to: 'sessions#new'
+  get 'logout', to: 'sessions#destroy'
 
   #root 'users#index'
 
