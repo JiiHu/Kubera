@@ -16,4 +16,4 @@ deploy:
 addons:
   code_climate:
     repo_token: 
-    	secure: dKkA+zD67+HpGSzFyYUwUNHvbohojZ4UMZcF+7ZHsTvkH0F2As+nJYlYgs0s5GSJJ8MsZIwsf6xmQgfZFPFKu9rnLtRw2yL/ut8Src5q6nK61hDGxP+BJfiJMFpiGI6EzLeRagewYp6g3W6bENCW856s14o73J1zaH76NWQRA9o=
+        secure: dKkA+zD67+HpGSzFyYUwUNHvbohojZ4UMZcF+7ZHsTvkH0F2As+nJYlYgs0s5GSJJ8MsZIwsf6xmQgfZFPFKu9rnLtRw2yL/ut8Src5q6nK61hDGxP+BJfiJMFpiGI6EzLeRagewYp6g3W6bENCW856s14o73J1zaH76NWQRA9o=
