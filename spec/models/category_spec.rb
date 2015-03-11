@@ -7,4 +7,11 @@ describe Category do
     expect(category.name).to eq("food")
   end
 
+  it "returns its name with to_s" do
+    user = User.create username:"Pekka"
+
+    expect(user.to_s).to eq("Pekka")
+  end
+
+
 end

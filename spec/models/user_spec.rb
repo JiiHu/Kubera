@@ -14,6 +14,12 @@ describe User do
     expect(User.count).to eq(0)
   end
 
+  it "returns its name with to_s" do
+    category = Category.create name:"food"
+
+    expect(category.to_s).to eq("food")
+  end
+
 
   describe "with a proper password" do
     let(:user){ FactoryGirl.create(:user) }
@@ -24,5 +30,10 @@ describe User do
     end
   end
 
+# for coverage report
+UsersController
+CategoriesController
+SessionsController
+WelcomeController
 
 end
