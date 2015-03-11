@@ -14,9 +14,21 @@
  *= require_self
  */
 
+/* IMPORTS */
 @import "font-awesome";
 
+/* VARIABLES*/
 $yellow-color: #fece40;
+
+$btn-success: #74d21d;
+$btn-info: #74d21d;
+$btn-primary: #0056a9;
+$btn-danger: #c20202;
+
+$dark-text: #444;
+
+
+/* CSS */
 
 body,
 p, ol, ul, td {
@@ -33,9 +45,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	max-height: 20px;
 }
 
+main {
+	background-color: #fff;
+}
+
 .row {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 .yellow {
@@ -43,17 +59,36 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 
-/* ANCHORS */
-a {
-	transition: all 0.2s linear 0s;
+/* TABLE */
+
+table.table-auto {
+	width: auto;
 }
+
+
+/* ANCHORS */
+a,
 a:hover {
 	transition: all 0.2s linear 0s;
 }
-
+a,
 a:visited {
 	color: #444;
 }
+a.anchor,
+a.anchor:visited {
+	color: $dark-text;
+	border-bottom: 2px solid $yellow-color;
+	font-weight: 700;
+}
+
+a.anchor:hover {
+	background-color: transparent;
+	text-decoration: none;
+	border-color: $dark-text;
+	color: $dark-text;
+}
+
 /* NAVBAR */
 a.navbar-brand:hover {
 	background-color: transparent;
@@ -62,8 +97,12 @@ a.navbar-brand:hover {
 	padding: 20px;
 }
 
-
 /* BUTTONS */ 
+
+.btn:visited {
+  color: $dark-text;
+}
+
 .btn {
 	border-width: 3px;
 }
@@ -77,7 +116,27 @@ a.navbar-brand:hover {
 }
 
 .btn-success {
-	border-color: #8fff28;
+	border-color: $btn-success;
+}
+.btn-success:hover {
+	background-color: $btn-success;
+	border-color: $btn-success;
+}
+
+.btn-danger {
+	border-color: $btn-danger;
+}
+.btn-danger:hover {
+	background-color: $btn-danger;
+	border-color: $btn-danger;
+}
+
+.btn-primary {
+	border-color: $btn-primary;
+}
+.btn-primary:hover {
+	background-color: $btn-primary;
+	border-color: $btn-primary;
 }
 
 .btn-info:hover, .btn-info:focus, .btn-info.focus, .btn-info:active, .btn-info.active, .open > .btn-info.dropdown-toggle {
@@ -87,12 +146,16 @@ a.navbar-brand:hover {
 
 .btn-new {
 	background: transparent;
-	color: #444;
+	color: $dark-text;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 13px;
 	padding: 13px 21px;
 }
+.btn-new:hover {
+	color: #fff;
+}
+
 
 /* FRONT */
 .jumbo-front .btn {
@@ -108,7 +171,7 @@ li.jumbo-link a:hover {
 	color: $yellow-color;
 }
 .jumbo-front .btn:hover {
-	color: #444;
+	color: $dark-text;
 }
 
 .jumbotron.jumbo-front {

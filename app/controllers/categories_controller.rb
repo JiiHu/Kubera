@@ -1,10 +1,11 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_that_signed_in
 
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.where user:current_user
   end
 
   # GET /categories/1

@@ -18,6 +18,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
+  gem "better_errors"
 end
 
 group :test do
