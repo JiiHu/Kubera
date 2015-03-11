@@ -9,6 +9,7 @@ gem 'rb-readline'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'bootstrap-sass'
+gem "font-awesome-rails"
 
 group :development do
   gem 'rails_layout'

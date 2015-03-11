@@ -14,9 +14,15 @@
  *= require_self
  */
 
+@import "font-awesome";
 
-body {
+$yellow-color: #fece40;
+
+body,
+p, ol, ul, td {
 	font-family: 'Open Sans', sans-serif;
+}
+body {
 	color: #555;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -26,6 +32,16 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 .logo {
 	max-height: 20px;
 }
+
+.row {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.yellow {
+	color: $yellow-color;
+}
+
 
 /* ANCHORS */
 a {
@@ -38,8 +54,12 @@ a:hover {
 a:visited {
 	color: #444;
 }
+/* NAVBAR */
 a.navbar-brand:hover {
 	background-color: transparent;
+}
+.navbar-light {
+	padding: 20px;
 }
 
 
@@ -85,7 +105,7 @@ li.jumbo-link a {
 }
 li.jumbo-link a:hover {
 	background-color: transparent;
-	color: #6ad521;
+	color: $yellow-color;
 }
 .jumbo-front .btn:hover {
 	color: #444;
@@ -103,7 +123,7 @@ li.jumbo-link a:hover {
 	margin: 0 0 30px;
 }
 .jumbo-front {
-	padding-top: 120px;
+	padding-top: 180px;
 	padding-bottom: 120px;
 	margin: -52px -15px 0;
 	border-radius: 0;
