@@ -1,12 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_that_signed_in
 
-  # GET /users
-  # GET /users.json
-  def index
-    @users = User.all
-  end
+  before_action :ensure_that_signed_in, except: [:new, :create]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_that_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users/1
   # GET /users/1.json
@@ -71,5 +67,9 @@ class UsersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
       params.require(:user).permit(:username, :password, :password_confirmation)
+    end
+
+    def ensure_that_correct_user
+      redirect_to current_user if current_user != @user
     end
 end

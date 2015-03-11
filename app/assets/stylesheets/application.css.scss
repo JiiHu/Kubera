@@ -18,6 +18,8 @@
 @import "font-awesome";
 
 /* VARIABLES*/
+$background: #fcfcfc;
+
 $yellow-color: #fece40;
 
 $btn-success: #74d21d;
@@ -45,8 +47,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	max-height: 20px;
 }
 
+body,
 main {
-	background-color: #fff;
+	background-color: $background;
 }
 
 .row {
@@ -67,6 +70,8 @@ table.table-auto {
 
 
 /* ANCHORS */
+.btn,
+.btn:hover,
 a,
 a:hover {
 	transition: all 0.2s linear 0s;
@@ -200,4 +205,12 @@ li.jumbo-link a:hover {
 .jumbo-front p {
 	font-weight: 300;
 	font-size: 15px;
+}
+
+
+/* FORMS */
+
+.login-form {
+	max-width: 500px;
+	margin: 0 auto;
 }
