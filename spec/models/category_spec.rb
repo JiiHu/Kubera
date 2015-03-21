@@ -7,6 +7,18 @@ describe Category do
     expect(category.name).to eq("food")
   end
 
+  it "doesn't have too short name" do
+    category = Category.new name:"aa"
+
+    expect(category).not_to be_valid
+  end
+
+  it "doesn't have too long name" do
+    category = Category.new name:"abcdefghijklmnop"
+
+    expect(category).not_to be_valid
+  end
+
   it "returns its name with to_s" do
     user = User.create username:"Pekka"
 

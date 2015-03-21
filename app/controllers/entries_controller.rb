@@ -25,6 +25,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @entry.user = current_user
 
     respond_to do |format|
       if @entry.save
@@ -69,6 +70,6 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:amount, :date, :user_id, :category_id)
+      params.require(:entry).permit(:amount, :date, :category_id)
     end
 end

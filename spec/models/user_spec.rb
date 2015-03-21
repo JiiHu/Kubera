@@ -35,5 +35,6 @@ UsersController
 CategoriesController
 SessionsController
 WelcomeController
+EntriesController
 
 end

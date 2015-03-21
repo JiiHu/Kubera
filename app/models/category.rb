@@ -4,6 +4,7 @@ class Category < ActiveRecord::Base
                        length: { minimum: 3, maximum: 15 }
   
   belongs_to :user
+  has_many :entries
 
   def to_s
     "#{name}"
