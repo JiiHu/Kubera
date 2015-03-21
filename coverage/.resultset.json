@@ -276,6 +276,9 @@
       ],
       "/home/jonnehuo/ruby/kubera/app/controllers/entries_controller.rb": [
         1,
+        null,
+        1,
+        1,
         1,
         null,
         null,
@@ -344,6 +347,10 @@
         1,
         0,
         null,
+        null,
+        null,
+        1,
+        0,
         null,
         null,
         1,
@@ -352,6 +359,6 @@
         null
       ]
     },
-    "timestamp": 1426940040
+    "timestamp": 1426948527
   }
 }

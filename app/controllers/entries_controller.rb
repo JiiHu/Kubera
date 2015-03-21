@@ -1,10 +1,13 @@
 class EntriesController < ApplicationController
+
+  before_action :ensure_that_signed_in
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :ensure_that_correct_user, only: [:show, :edit, :update, :destroy]
 
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.where user:current_user
   end
 
   # GET /entries/1
@@ -71,5 +74,9 @@ class EntriesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
       params.require(:entry).permit(:amount, :date, :category_id)
+    end
+
+    def ensure_that_correct_user
+      redirect_to entries_path if current_user != @entry.user
     end
 end

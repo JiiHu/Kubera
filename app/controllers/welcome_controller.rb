@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    redirect_to current_user if !current_user.nil?
+    redirect_to entries_path if !current_user.nil?
   end
 end
