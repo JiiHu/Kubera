@@ -13,6 +13,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @entries = Entry.where category:@category
   end
 
   # GET /categories/new

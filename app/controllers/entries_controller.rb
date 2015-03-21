@@ -31,7 +31,7 @@ class EntriesController < ApplicationController
     @entry.user = current_user
 
     respond_to do |format|
-      if @entry.save
+      if is_category_current_users_category and @entry.save
         format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
         format.json { render :show, status: :created, location: @entry }
       else
@@ -45,7 +45,8 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1.json
   def update
     respond_to do |format|
-      if @entry.update(entry_params)
+      category = Category.find entry_params['category_id']
+      if category.user == current_user and @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
       else
@@ -78,5 +79,9 @@ class EntriesController < ApplicationController
 
     def ensure_that_correct_user
       redirect_to entries_path if current_user != @entry.user
+    end
+
+    def is_category_current_users_category
+      return @entry.category.user == current_user
     end
 end
