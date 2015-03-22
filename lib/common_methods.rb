@@ -7,7 +7,7 @@ module CommonMethods
         format.json { render :show, status: :created, location: object }
       else
         format.html { render :new }
-        format.json { render json: object.errors, status: :unprocessable_entity }
+        format_json_unsuccessful
       end
     end
   end
@@ -19,7 +19,7 @@ module CommonMethods
         format.json { render :show, status: :ok, location: object }
       else
         format.html { render :edit }
-        format.json { render json: object.errors, status: :unprocessable_entity }
+        format_json_unsuccessful
       end
     end
   end
@@ -29,6 +29,10 @@ module CommonMethods
       format.html { redirect_to url, notice: "#{class_name} was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def format_json_unsuccessful
+    format.json { render json: object.errors, status: :unprocessable_entity }
   end
 
 end
