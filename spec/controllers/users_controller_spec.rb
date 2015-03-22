@@ -15,7 +15,7 @@ describe UsersController do
     describe "GET #show" do
       it "assigns the requested user to @user" do 
         get :show, id: user
-        assigns(:user).should eq(user)
+        expect(assigns(:user)).to eq(user)
       end
       
       it "renders the #show view" do
@@ -48,22 +48,24 @@ describe UsersController do
   describe "when not logged in" do
 
     describe "POST #create" do
+
       describe "with valid params" do 
         it "creates and saves user" do
-
-
-
-          user = User.new username:"juuh", password:"eli", password_confirmation:"eli"
-          user_params = {"username"=>"5555", "password"=>"5555", "password_confirmation"=>"5555"}
-          post :create, user:user_params
-          expect(User.count).to eq(1)
-
-        end
-        
-        it "renders the #index view" do
-          expect(response).to render_template(:index)
+          user_params = {"username"=>"juuh", "password"=>"elikka", "password_confirmation"=>"elikka"}
+          expect{
+            post :create, user:user_params
+          }.to change(User,:count).by(1)
         end
       end
+
+      describe "with invalid params" do 
+        it "redirects to users#new" do
+          user_params = {"username"=>"asd", "password"=>"asd", "password_confirmation"=>"asd"}
+          post :create, user:user_params
+          expect(response).to render_template(:new)
+        end
+      end
+
     end
 
   end

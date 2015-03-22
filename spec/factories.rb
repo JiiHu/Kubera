@@ -9,6 +9,7 @@ FactoryGirl.define do
   factory :category do
     name "food"
     user
+    income false
   end
 
   factory :entry do
