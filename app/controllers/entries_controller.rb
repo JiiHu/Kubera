@@ -1,4 +1,5 @@
 class EntriesController < ApplicationController
+  include CommonMethods
 
   before_action :ensure_that_signed_in
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
@@ -31,15 +32,7 @@ class EntriesController < ApplicationController
     @entry = Entry.new(entry_params)
     @entry.user = current_user
 
-    respond_to do |format|
-      if is_category_current_users_category and @entry.save
-        format.html { redirect_to @entry, notice: 'Entry was successfully created.' }
-        format.json { render :show, status: :created, location: @entry }
-      else
-        format.html { render :new }
-        format.json { render json: @entry.errors, status: :unprocessable_entity }
-      end
-    end
+    create_helper(@entry)
   end
 
   # PATCH/PUT /entries/1

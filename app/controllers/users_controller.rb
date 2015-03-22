@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include CommonMethods
 
   before_action :ensure_that_signed_in, except: [:new, :create]
   before_action :set_user, only: [:show, :edit, :update, :destroy]
@@ -23,15 +24,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
-    end
+    create_helper(@user)
   end
 
   # PATCH/PUT /users/1
