@@ -68,6 +68,10 @@ table.table-auto {
 	width: auto;
 }
 
+tr.tr-income {
+	background-color: rgba(125,255,0,0.3);
+}
+
 
 /* ANCHORS */
 .btn,
@@ -150,7 +154,7 @@ a.navbar-brand:hover {
 }
 
 .btn-new {
-	background: transparent;
+	background: #fff;
 	color: $dark-text;
 	text-transform: uppercase;
 	font-weight: 700;

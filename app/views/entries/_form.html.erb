@@ -21,9 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br>
-    <%= f.number_field :category_id, class:"form-control" %>
+    <%= f.select :category_id, options_from_collection_for_select(@categories, :id, :name, selected: @entry.category_id), {}, { class:"form-control" } %>
   </div>
   <div class="actions">
-    <%= f.submit 'Add', class:"btn btn-success btn-new" %>
+    <%= f.submit action_name, class:"btn btn-success btn-new" %>
   </div>
 <% end %>

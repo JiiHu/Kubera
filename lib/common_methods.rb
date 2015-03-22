@@ -8,7 +8,6 @@ module CommonMethods
       else
         format.html { render :new }
         format.json { render json: object.errors, status: :unprocessable_entity }
-        format_json_unsuccessful
       end
     end
   end
@@ -21,7 +20,6 @@ module CommonMethods
       else
         format.html { render :edit }
         format.json { render json: object.errors, status: :unprocessable_entity }
-        format_json_unsuccessful
       end
     end
   end

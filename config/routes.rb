@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
 
-  #root 'users#index'
-
+  get 'entries/:year/:month', to: 'entries#view', as: :view_entries
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

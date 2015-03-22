@@ -1,9 +1,5 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Username:</strong>
+<h1>
   <%= @user.username %>
-</p>
+</h1>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user), class:"btn btn-new btn-primary" %>

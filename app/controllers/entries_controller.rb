@@ -1,10 +1,18 @@
 class EntriesController < ApplicationController
   include CommonMethods
 
-
   before_action :ensure_that_signed_in
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_correct_user, only: [:show, :edit, :update, :destroy]
+  before_action :categories_to_form, only: [:new, :edit, :create]
+
+  def view
+    @year = params[:year]
+    @month = params[:month]
+
+    @entries = Entry.all
+  end
+
 
   # GET /entries
   # GET /entries.json
@@ -29,7 +37,6 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-
     @entry = Entry.new(entry_params)
     @entry.user = current_user
 
@@ -68,5 +75,9 @@ class EntriesController < ApplicationController
     def is_category_current_users_category
       return false unless @entry.category
       return @entry.category.user == current_user
+    end
+
+    def categories_to_form
+      @categories = Category.where user:current_user
     end
 end
