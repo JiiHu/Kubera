@@ -1,6 +1,14 @@
 
 <h1><%= @category.name %></h1>
 
+<p>
+  <% if @category.income %>
+    Income
+  <% else %>
+    Outcome
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_category_path(@category), class:"btn btn-primary btn-new" %>
 
 <h2>Entries in this category</h2>

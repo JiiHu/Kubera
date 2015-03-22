@@ -82,6 +82,7 @@ class EntriesController < ApplicationController
     end
 
     def is_category_current_users_category
+      return false unless @entry.category
       return @entry.category.user == current_user
     end
 end

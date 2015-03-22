@@ -26,4 +26,12 @@ describe Category do
   end
 
 
+  it "is not saved without name" do
+    user = FactoryGirl.create(:user)
+    category = Category.create user:user
+
+    expect(category).not_to be_valid
+    expect(Category.count).to eq(0)
+  end
+
 end

@@ -1,26 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Categories</h1>
+<div class="col-md-6">
+  <h2>Outcome categories</h2>
+  <%= render 'table', categories: @outcome %>
+</div>
 
-<table class="table table-auto">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="2"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= link_to category, category, class:"anchor" %></td>
-        <td><%= link_to 'Edit', edit_category_path(category), class:"btn btn-primary btn-new" %></td>
-        <td><%= link_to 'Destroy', category, class:"btn btn-danger btn-new", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<div class="col-md-6">
+  <h2>Income categories</h2>
+  <%= render 'table', categories: @income %>
+</div>
 
 <%= link_to 'New Category', new_category_path, class:"btn btn-new btn-success" %>
