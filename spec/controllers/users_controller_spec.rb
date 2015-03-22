@@ -43,6 +43,34 @@ describe UsersController do
       end
     end
 
+    describe "POST #update" do
+
+      describe "with valid params" do 
+        it "updates user" do
+          user_params = {"username"=>"esjonne", "password"=>"eses","password_confirmation"=>"eses"}
+          put :update, id:user.id, user:user_params
+
+          user2 = User.find_by username:"esjonne"
+          expect(user2).not_to eq(nil)
+        end
+      end
+
+      describe "with invalid params" do 
+        it "wont update user" do
+          user_params = {"username"=>"a"}
+          put :update, id:user.id, user:user_params
+
+          user2 = User.find_by username:"jonne"
+          expect(user2.username).not_to eq(nil)
+
+          user2 = User.find_by username:"a"
+          expect(user2).to eq(nil)
+        end
+      end
+
+    end
+
+
   end
 
   describe "when not logged in" do

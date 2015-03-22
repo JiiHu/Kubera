@@ -43,7 +43,7 @@ describe CategoriesController do
       expect(assigns(:category)).to be_a_new(Category)
     end
     
-    it "renders the #show view" do
+    it "renders the #new view" do
       expect(response).to render_template(:new)
     end
   end
@@ -70,7 +70,7 @@ describe CategoriesController do
     end
 
     describe "with invalid params" do 
-      it "redirects to users#new" do
+      it "redirects to categories#new" do
         category_params = {"name"=>"a", "income"=>false}
         post :create, category:category_params
         expect(response).to render_template(:new)
@@ -99,7 +99,7 @@ describe CategoriesController do
         put :update, id:category.id, category:category_params
 
         category = Category.find_by name:"food"
-        expect(category.name).to eq("food")
+        expect(category).not_to eq(nil)
 
         category = Category.find_by name:"a"
         expect(category).to eq(nil)

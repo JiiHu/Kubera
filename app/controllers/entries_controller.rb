@@ -27,6 +27,7 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
+
     @entry = Entry.new(entry_params)
     @entry.user = current_user
 
