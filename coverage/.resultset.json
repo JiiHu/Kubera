@@ -356,6 +356,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/home/jonnehuo/ruby/kubera/app/models/user.rb": [
@@ -376,6 +377,6 @@
         null
       ]
     },
-    "timestamp": 1427065064
+    "timestamp": 1427115540
   }
 }

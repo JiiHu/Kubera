@@ -30,11 +30,5 @@ describe User do
     end
   end
 
-# for coverage report
-UsersController
-CategoriesController
-SessionsController
-WelcomeController
-EntriesController
 
 end

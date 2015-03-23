@@ -7,10 +7,14 @@ class EntriesController < ApplicationController
   before_action :categories_to_form, only: [:new, :edit, :create]
 
   def view
-    @year = params[:year]
-    @month = params[:month]
+    @year = params[:year].to_i
+    @month = params[:month].to_i
 
-    @entries = Entry.all
+    start_date = Date.new(@year, @month, 1)
+    end_date = Date.today
+    @entries = Entry.where(date: start_date..end_date, user:current_user)
+    
+    #@entries = Entry.where user:current_user
   end
 
 

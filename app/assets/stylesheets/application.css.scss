@@ -61,6 +61,10 @@ main {
 	color: $yellow-color;
 }
 
+main {
+	margin-top: 75px;
+}
+
 
 /* TABLE */
 
@@ -103,7 +107,16 @@ a.navbar-brand:hover {
 	background-color: transparent;
 }
 .navbar-light {
+	background: transparent;
+	margin-bottom: -125px;
 	padding: 20px;
+	position: relative;
+	z-index: 999;
+}
+
+.navbar-fixed-top {
+    background: #fff;
+    border-bottom: 3px solid #ededed;
 }
 
 /* BUTTONS */ 
@@ -168,7 +181,7 @@ a.navbar-brand:hover {
 
 /* FRONT */
 .jumbo-front .btn {
-	color: #eee;
+	color: $dark-text;
 }
 li.jumbo-link a {
 	color: #eee;
