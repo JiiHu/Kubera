@@ -21,6 +21,11 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.where user:current_user
+    @views = {
+      "2015 tammi" => '/entries/2015/1',
+      "2015 helmi" => '/entries/2015/2',
+      "2015 maalis" => '/entries/2015/3',
+    }
   end
 
   # GET /entries/1

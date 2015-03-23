@@ -1,9 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Entries</h1>
+<div class="col-md-12">
+	<h1>Entries</h1>
+</div>
 
-<%= render 'table' %>
+<div class="col-md-4">
+	<%= link_to 'New Entry', new_entry_path, class:"btn btn-new btn-success" %>
+</div>
 
-<br>
+<script type="text/javascript">	
+	$( document ).ready(function() {
+		$( "#entry-view-select" ).change(function() {
+			document.location.href = $(this).val();
+		});
+	});
+</script>
 
-<%= link_to 'New Entry', new_entry_path, class:"btn btn-new btn-success" %>
+<div class="col-md-4">
+	<%= form_tag do %>
+		<div class="field">
+			<%= label_tag :entry_view %><br>
+			<%= select_tag :entry_view, options_from_collection_for_select(@views, :last, :first), { id:"entry-view-select", class:"form-control" } %>
+		</div>
+	<% end %>
+</div>
+
+
+
+<%= link_to 'test', view_entries_path(2015, 3) %>
