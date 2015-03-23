@@ -11,10 +11,9 @@ class EntriesController < ApplicationController
     @month = params[:month].to_i
 
     start_date = Date.new(@year, @month, 1)
-    end_date = Date.today
+    end_date = Date.new(@year, @month, -1)
     @entries = Entry.where(date: start_date..end_date, user:current_user)
-    
-    #@entries = Entry.where user:current_user
+    @categories = categories_from_entries
   end
 
 
@@ -84,4 +83,27 @@ class EntriesController < ApplicationController
     def categories_to_form
       @categories = Category.where user:current_user
     end
+
+    def categories_from_entries
+      categories = []
+      @entries.each do |e|
+        categories << e.category unless categories.include?(e.category)
+      end
+      stats = {}
+      categories.each do |c|
+        stats[c] = 0 if stats[c].nil?
+        stats[c] += total_from_categories(@entries.where category:c)
+      end
+      return stats
+    end
+
+    def total_from_categories(entries)
+      total = 0
+      entries.each do |e|
+        total += e.amount
+      end
+      return total
+    end
+
+
 end
