@@ -12,11 +12,24 @@ describe EntriesController do
     session[:user_id] = user.id
   }
 
-  describe "GET index" do
+  describe "GET #index" do
     before(:each) { get :index }
 
     it "renders the :index view" do
       expect(response).to render_template :index
+    end
+
+    it 'to be success' do
+      expect(response).to be_success
+    end
+  end
+
+
+  describe "GET #view" do
+    before(:each) { get :view, year:2015, month:3 }
+
+    it "renders the :view view" do
+      expect(response).to render_template :view
     end
 
     it 'to be success' do

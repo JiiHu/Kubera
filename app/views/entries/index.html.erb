@@ -1,30 +1,38 @@
-<p id="notice"><%= notice %></p>
-
 <div class="col-md-12">
 	<h1>Entries</h1>
 </div>
 
 <div class="col-md-4">
+	<h4>Create new entry</h4>
 	<%= link_to 'New Entry', new_entry_path, class:"btn btn-new btn-success" %>
 </div>
 
 <script type="text/javascript">	
+	function changeAddress(url) {
+		document.location.href = url;
+	}
+
 	$( document ).ready(function() {
-		$( "#entry-view-select" ).change(function() {
-			document.location.href = $(this).val();
+		var selectId = "#entry-view-select";
+		$( selectId ).change(function() {
+			changeAddress( $(this).val() );
 		});
+		$( "#entry-view-submit" ).click(function(event) {
+			event.preventDefault();
+			changeAddress( $(selectId).val() );
+		});
+
 	});
 </script>
 
 <div class="col-md-4">
+	<h4>View entries by month</h4>
 	<%= form_tag do %>
 		<div class="field">
-			<%= label_tag :entry_view %><br>
-			<%= select_tag :entry_view, options_from_collection_for_select(@views, :last, :first), { id:"entry-view-select", class:"form-control" } %>
+			<%= select_tag :entry_view, options_from_collection_for_select(@views, :last, :first), { id:"entry-view-select", class:"form-control", size:5 } %>
+		</div>
+		<div class="field">
+			<%= submit_tag 'View', id:"entry-view-submit", class:"btn btn-new btn-success" %>
 		</div>
 	<% end %>
 </div>
-
-
-
-<%= link_to 'test', view_entries_path(2015, 3) %>

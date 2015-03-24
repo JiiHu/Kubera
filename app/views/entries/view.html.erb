@@ -1,16 +1,11 @@
-<h1><%= @year %> / <%= @month %></h1>
+<div class="col-md-12">
+	<h1><%= @year %> / <%= @month %></h1>
+</div>
 
-<table class="table table-auto">
-	<tr>
-		<th>Name</th>
-		<th>Total</th>
-	</tr>
-<% @categories.each do |c, v| %>
-	<tr>
-		<td><%= c %></td>
-		<td><%= v %></td>
-	</tr>
-<% end %>
-</table>
+<div class="col-md-6">
+	<%= render 'category_table', categories: @categories %>
+</div>
 
-<%= render 'table' %>
+<div class="col-md-12">
+	<%= render 'table' %>
+</div>

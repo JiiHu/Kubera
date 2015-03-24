@@ -21,6 +21,7 @@
 $background: #fcfcfc;
 
 $yellow-color: #fece40;
+$income-bg: rgba(125,255,0,0.3);
 
 $btn-success: #74d21d;
 $btn-info: #74d21d;
@@ -73,7 +74,7 @@ table.table-auto {
 }
 
 tr.tr-income {
-	background-color: rgba(125,255,0,0.3);
+	background-color: $income-bg;
 }
 
 

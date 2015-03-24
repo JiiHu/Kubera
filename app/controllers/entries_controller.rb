@@ -10,9 +10,7 @@ class EntriesController < ApplicationController
     @year = params[:year].to_i
     @month = params[:month].to_i
 
-    start_date = Date.new(@year, @month, 1)
-    end_date = Date.new(@year, @month, -1)
-    @entries = Entry.where(date: start_date..end_date, user:current_user)
+    @entries = Entry.where(date: Date.new(@year, @month).all_month, user:current_user)
     @categories = categories_from_entries
   end
 
@@ -21,11 +19,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.where user:current_user
-    @views = {
-      "2015 tammi" => '/entries/2015/1',
-      "2015 helmi" => '/entries/2015/2',
-      "2015 maalis" => '/entries/2015/3',
-    }
+    @views = list_months
   end
 
   # GET /entries/1
@@ -90,12 +84,8 @@ class EntriesController < ApplicationController
     end
 
     def categories_from_entries
-      categories = []
-      @entries.each do |e|
-        categories << e.category unless categories.include?(e.category)
-      end
       stats = {}
-      categories.each do |c|
+      Category.where(user:current_user).each do |c|
         stats[c] = 0 if stats[c].nil?
         stats[c] += total_from_categories(@entries.where category:c)
       end
@@ -108,6 +98,25 @@ class EntriesController < ApplicationController
         total += e.amount
       end
       return total
+    end
+
+    def list_months
+      oldest = Entry.order('date DESC').last.date
+      date = Date.today
+      prefix = '/entries/'
+
+      list = {}
+      while true
+        month = date.month
+        year = date.year.to_s
+        tag = year + ' ' + Date::MONTHNAMES[month]
+        url = prefix + year + '/' + month.to_s
+        list[tag] = url
+        date = date - 1.month
+        break if date < oldest 
+      end
+      
+      return list
     end
 
 
