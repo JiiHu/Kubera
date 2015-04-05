@@ -5,13 +5,19 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_correct_user, only: [:show, :edit, :update, :destroy]
   before_action :categories_to_form, only: [:new, :edit, :create]
+  before_action :categories_is_not_empty, only: [:new]
 
   def view
     @year = params[:year].to_i
     @month = params[:month].to_i
 
     @entries = Entry.where(date: Date.new(@year, @month).all_month, user:current_user)
-    @categories = categories_from_entries
+    @categories = stats_from_entries(@entries)
+  end
+
+
+  def stats
+    @total_stats = stats_from_entries(Entry.where user:current_user)
   end
 
 
@@ -74,6 +80,11 @@ class EntriesController < ApplicationController
       redirect_to entries_path if current_user != @entry.user
     end
 
+    def categories_is_not_empty
+      alert = "You must create a category before creating a new entry"
+      redirect_to new_category_path, alert: alert if Category.where(user:current_user).empty?
+    end
+
     def is_category_current_users_category
       return false unless @entry.category
       return @entry.category.user == current_user
@@ -83,11 +94,19 @@ class EntriesController < ApplicationController
       @categories = Category.where user:current_user
     end
 
-    def categories_from_entries
+    def stats_from_entries(entries)
       stats = {}
+      stats['income'] = {}
+      stats['outcome'] = {}
+
+      stats['income']['Total'] = 0
+      stats['outcome']['Total'] = 0
       Category.where(user:current_user).each do |c|
-        stats[c] = 0 if stats[c].nil?
-        stats[c] += total_from_categories(@entries.where category:c)
+        in_out = c.income? ? 'income' : 'outcome'
+        stats[in_out][c] = 0 if stats[in_out][c].nil?
+        total = total_from_categories(entries.where category:c)
+        stats[in_out][c] += total
+        stats[in_out]['Total'] += total
       end
       return stats
     end
@@ -101,19 +120,19 @@ class EntriesController < ApplicationController
     end
 
     def list_months
-      oldest = Entry.order('date DESC').last.date
+      return {} if Entry.where(user:current_user).empty?
+      oldest = Entry.where(user:current_user).order('date DESC').last.date
       date = Date.today
       prefix = '/entries/'
 
       list = {}
-      while true
+      while date >= oldest 
         month = date.month
         year = date.year.to_s
         tag = year + ' ' + Date::MONTHNAMES[month]
         url = prefix + year + '/' + month.to_s
         list[tag] = url
         date = date - 1.month
-        break if date < oldest 
       end
       
       return list

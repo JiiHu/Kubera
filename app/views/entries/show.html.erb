@@ -1,22 +1,20 @@
+<h1>Entry #<%= @entry.id %></h1>
 
-<p>
-  <strong>Amount:</strong>
-  <%= @entry.amount %>
-</p>
+<h3>
+  <%= @entry.amount %> &euro;
+</h3>
 
-<p>
-  <strong>Date:</strong>
+<h3>
   <%= @entry.date %>
-</p>
+  <small>
+  Thats 
+  <%= time_ago_in_words(@entry.date) %>
+  ago
+  </small>
+</h3>
 
-<p>
-  <strong>User:</strong>
-  <%= @entry.user_id %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @entry.category_id %>
-</p>
+<h4>
+  <%= link_to @entry.category, @entry.category, class:"anchor" %>
+</h4>
 
 <%= link_to 'Edit', edit_entry_path(@entry), class:"btn btn-primary btn-new" %>

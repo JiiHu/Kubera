@@ -6,7 +6,8 @@
 <% else %>
 	<li><%= link_to 'Entries', entries_path %></li>
 	<li><%= link_to 'Categories', categories_path %></li>
+	<li><%= link_to 'Statistics', stats_path %></li>
 	
-	<li><%= link_to current_user.username, current_user %></li>
+	<li><%= link_to current_user.username, current_user_path %></li>
 	<li><%= link_to 'Log out', logout_path %></li>
 <% end %>

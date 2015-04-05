@@ -1,0 +1,923 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backg",
+				"background"
+			],
+			[
+				"paddi",
+				"padding-right"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"am",
+				"amount"
+			],
+			[
+				"h",
+				"h4	Tag"
+			],
+			[
+				"chang",
+				"changeAddress"
+			],
+			[
+				"entri",
+				"entry-view-select"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"total",
+				"total_from_categories"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"pass",
+				"password_confirmation"
+			],
+			[
+				"catego",
+				"category"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"categor",
+				"category_params"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"btn-succes",
+				"btn-success-1"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"p",
+				"p	Tag"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"te",
+				"techs"
+			],
+			[
+				"ser",
+				"serverCont"
+			],
+			[
+				"pro",
+				"processed"
+			],
+			[
+				"child",
+				"childrens"
+			],
+			[
+				"g",
+				"googlefonts"
+			],
+			[
+				"reve",
+				"revenue"
+			],
+			[
+				"w",
+				"wordpress"
+			],
+			[
+				"j",
+				"jqueryArr"
+			],
+			[
+				"par",
+				"parseCompanysOwnPage"
+			],
+			[
+				"url",
+				"urlArr"
+			],
+			[
+				"kau",
+				"kauppalehtiUrl"
+			],
+			[
+				"parse",
+				"parseCompanyPage"
+			],
+			[
+				"recent",
+				"recent_ratings"
+			],
+			[
+				"top_b",
+				"top_breweries"
+			],
+			[
+				"brew",
+				"brewerylist"
+			],
+			[
+				"W",
+				"Weizen"
+			],
+			[
+				"bre",
+				"breweries_were_reversed"
+			],
+			[
+				"active",
+				"active_breweries"
+			],
+			[
+				"style",
+				"style_ratings"
+			],
+			[
+				"avera",
+				"average_for_list"
+			],
+			[
+				"ensure",
+				"ensure_that_signed_in"
+			],
+			[
+				"fav",
+				"favorite_brewery"
+			],
+			[
+				"beer",
+				"beer_club"
+			],
+			[
+				"members",
+				"memberships"
+			],
+			[
+				"beerC",
+				"beer_club_id"
+			],
+			[
+				"rati",
+				"ratings"
+			],
+			[
+				"ratings",
+				"ratings_for_style"
+			],
+			[
+				"ratin",
+				"rating"
+			],
+			[
+				"sco",
+				"style_scores"
+			],
+			[
+				"mem",
+				"membership_params"
+			],
+			[
+				"Beer",
+				"BeerClub"
+			],
+			[
+				"lin",
+				"link_to"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"admi",
+				"admin_accounts"
+			],
+			[
+				"border",
+				"border-color"
+			],
+			[
+				"tog",
+				"toggleRestaurantSaveState"
+			],
+			[
+				"li",
+				"line-height"
+			],
+			[
+				"area",
+				"areaName"
+			],
+			[
+				"are",
+				"areacode"
+			],
+			[
+				"restau",
+				"restaurants"
+			],
+			[
+				"a",
+				"areacode"
+			],
+			[
+				"list-st",
+				"list-style-type"
+			],
+			[
+				"menu",
+				"menu-url"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"he",
+				"head	Tag"
+			],
+			[
+				"r",
+				"rgb()"
+			],
+			[
+				"ma",
+				"max-width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"bak",
+				"background-color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"head",
+				"header	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/home/jonnehuo/ruby/parina/app/models/rating.rb",
+			"settings":
+			{
+				"buffer_size": 872,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonnehuo/ruby/parina/app/views/ratings/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 2818,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonnehuo/ruby/parina/app/assets/stylesheets/application.css.scss",
+			"settings":
+			{
+				"buffer_size": 2155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/jonnehuo/ruby/parina/app/controllers/ratings_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1743,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/jonnehuo/ruby/parina",
+		"/home/jonnehuo/ruby/parina/app",
+		"/home/jonnehuo/ruby/parina/app/assets",
+		"/home/jonnehuo/ruby/parina/app/assets/stylesheets",
+		"/home/jonnehuo/ruby/parina/app/controllers",
+		"/home/jonnehuo/ruby/parina/app/mailers",
+		"/home/jonnehuo/ruby/parina/app/models",
+		"/home/jonnehuo/ruby/parina/app/views",
+		"/home/jonnehuo/ruby/parina/app/views/layouts",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks",
+		"/home/jonnehuo/ruby/parina/app/views/ratings",
+		"/home/jonnehuo/ruby/parina/config",
+		"/home/jonnehuo/ruby/parina/db",
+		"/home/jonnehuo/ruby/parina/db/migrate"
+	],
+	"file_history":
+	[
+		"/home/jonnehuo/ruby/parina/app/models/rating.rb",
+		"/home/jonnehuo/ruby/parina/app/views/ratings/show.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks/show.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/ratings/_form.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/ratings/index.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks/_table_ratings.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/ratings/edit.html.erb",
+		"/home/jonnehuo/ruby/parina/app/controllers/ratings_controller.rb",
+		"/home/jonnehuo/ruby/parina/db/migrate/20150331092157_add_comment_and_parisiko_to_rating.rb",
+		"/home/jonnehuo/ruby/parina/app/models/parina_drink.rb",
+		"/home/jonnehuo/ruby/parina/app/controllers/parina_drinks_controller.rb",
+		"/home/jonnehuo/ruby/parina/app/assets/stylesheets/application.css.scss",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks/_form.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks/edit.html.erb",
+		"/home/jonnehuo/ruby/parina/Gemfile",
+		"/home/jonnehuo/ruby/parina/app/views/parina_drinks/index.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/layouts/_navigation.html.erb",
+		"/home/jonnehuo/ruby/parina/app/views/layouts/_navigation_links.html.erb",
+		"/home/jonnehuo/ruby/parina/db/migrate/20150330113407_change_attributes_in_rating.rb",
+		"/home/jonnehuo/ruby/parina/app/views/ratings/new.html.erb",
+		"/home/jonnehuo/ruby/parina/config/routes.rb",
+		"/home/jonnehuo/ruby/parina/db/migrate/20150330112311_create_ratings.rb",
+		"/home/jonnehuo/ruby/parina/config/environment.rb",
+		"/home/jonnehuo/ruby/kubera/app/assets/stylesheets/application.css.scss",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/new.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/categories_controller.rb",
+		"/home/jonnehuo/ohtu/repo/ohtu2015/viikko3/KumpulaBiershop/nb-configuration.xml",
+		"/home/jonnehuo/ohtu/repo/ohtu2015/viikko3/my_checks.xml",
+		"/home/jonnehuo/ruby/kubera/app/views/welcome/index.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/layouts/_messages.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/layouts/application.html.erb",
+		"/home/jonnehuo/.config/sublime-text-3/Packages/User/Plain text.sublime-settings",
+		"/home/jonnehuo/ruby/kubera/config/routes.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/layouts/_navigation_links.html.erb",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/users_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/users_controller.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/users/show.html.erb",
+		"/home/jonnehuo/ruby/kubera/spec/factories.rb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/entries_controller.rb",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/entries_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/view.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/index.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/_category_table.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/index.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/_form.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/_table.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/layouts/_navigation.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/models/entry.rb",
+		"/home/jonnehuo/ruby/kubera/spec/models/user_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/_table.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/_form.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/show.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/edit.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/categories/show.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/users/edit.html.erb",
+		"/home/jonnehuo/ruby/kubera/lib/common_methods.rb",
+		"/home/jonnehuo/ruby/kubera/app/models/category.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/edit.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/entries/new.html.erb",
+		"/home/jonnehuo/ruby/kubera/Gemfile",
+		"/home/jonnehuo/ruby/kubera/config/application.rb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/sessions_controller.rb",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/sessions_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/categories_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/models/user.rb",
+		"/home/jonnehuo/ruby/kubera/test/controllers/categories_controller_test.rb",
+		"/home/jonnehuo/ruby/kubera/test/controllers/users_controller_test.rb",
+		"/home/jonnehuo/ruby/kubera/db/migrate/20150322123027_add_income_to_categories.rb",
+		"/home/jonnehuo/ruby/kubera/db/migrate/20150321111852_change_amount_in_entries.rb",
+		"/home/jonnehuo/ruby/kubera/spec/rails_helper.rb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/application_controller.rb",
+		"/home/jonnehuo/ruby/kubera/spec/models/category_spec.rb",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/welcome_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/controllers/welcome_controller.rb",
+		"/home/jonnehuo/ruby/kubera/spec/models/entry_spec.rb",
+		"/home/jonnehuo/ruby/kubera/.travis.yml",
+		"/home/jonnehuo/ruby/kubera/app/views/users/_form.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/sessions/new.html.erb",
+		"/home/jonnehuo/ruby/kubera/test/fixtures/categories.yml",
+		"/home/jonnehuo/ruby/kubera/test/models/category_test.rb",
+		"/home/jonnehuo/ruby/kubera/test/models/user_test.rb",
+		"/home/jonnehuo/ruby/kubera/spec/spec_helper.rb",
+		"/home/jonnehuo/ruby/kubera/spec/requests/entries_spec.rb",
+		"/home/jonnehuo/ruby/kubera/spec/views/entries/edit.html.erb_spec.rb",
+		"/home/jonnehuo/ruby/kubera/spec/views/entries/new.html.erb_spec.rb",
+		"/home/jonnehuo/ruby/kubera/spec/helpers/entries_helper_spec.rb",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/chat/css/style.css",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/chat/index.html",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/chat/chat.html",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/chat/js/jquery.prettyPhoto.js",
+		"/home/jonnehuo/ruby/kubera/spec/controllers/users_controller_controller_spec.rb",
+		"/home/jonnehuo/ruby/kubera/app/views/users/new.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/views/users/index.html.erb",
+		"/home/jonnehuo/ruby/kubera/app/assets/stylesheets/framework_and_overrides.css.scss",
+		"/home/jonnehuo/ruby/kubera/db/migrate/20150310221725_add_user_id_to_categories.rb",
+		"/home/jonnehuo/ruby/kubera/db/migrate/20150310125732_add_password_digest_to_user.rb",
+		"/home/jonnehuo/ruby/kubera/README.md",
+		"/home/jonnehuo/Dropbox/cordova/unilunch/app/www/js/js.js",
+		"/run/user/1001/gvfs/sftp:host=sftp.shellit.org/home/u8512/public_html/lol/supersalainenshellitkansio/hours/ZendSkeletonApplication/module/Machine/view/machine/user/show.phtml",
+		"/run/user/1001/gvfs/sftp:host=sftp.shellit.org/home/u8512/public_html/lol/supersalainenshellitkansio/hours/ZendSkeletonApplication/module/Machine/view/machine/user/index.phtml",
+		"/run/user/1001/gvfs/sftp:host=sftp.shellit.org/home/u8512/public_html/lol/supersalainenshellitkansio/hours/ZendSkeletonApplication/module/Machine/src/Machine/Controller/UserController.php",
+		"/run/user/1001/gvfs/sftp:host=sftp.shellit.org/home/u8512/public_html/lol/supersalainenshellitkansio/hours/ZendSkeletonApplication/module/Machine/view/machine/work/add.phtml",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/scrapy/foobar/spiders/ListSpider.pyc",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/hack/style.css",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/hack/index.html",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/ui/index.js",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/ui/js/Balls.js",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/ui/bower_components/joo.css",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/ui/bower_components/vittu.js",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/ui/js/Summary.js",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/scrapy/foobar/spiders/ListSpider.py",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/scrapy/json-parse.py",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/hack/charts.js",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/hack/flare.json",
+		"/run/user/1001/gvfs/sftp:host=kalj.at/home/jiikax/www/hack/flare2.json",
+		"/home/jonnehuo/hackaton/Solinor-Hack-A-Ton/scrapy/foobar/spiders/foo.py",
+		"/home/jonnehuo/ruby/ratebeer/app/views/beers/index.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/controllers/ratings_controller.rb",
+		"/home/jonnehuo/ruby/ratebeer/app/views/ratings/index.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/views/layouts/application.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/controllers/beers_controller.rb",
+		"/home/jonnehuo/ruby/ratebeer/app/views/breweries/show.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/controllers/breweries_controller.rb",
+		"/home/jonnehuo/ruby/ratebeer/app/models/brewery.rb",
+		"/home/jonnehuo/ruby/ratebeer/app/models/beer.rb",
+		"/home/jonnehuo/ruby/ratebeer/app/views/breweries/index.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/views/beers/show.html.erb",
+		"/home/jonnehuo/ruby/ratebeer/app/models/rating.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"@parina.",
+			"average_by_experience",
+			"is_catego",
+			" is_category_current_users_category ",
+			"set_user",
+			"main",
+			"navbar",
+			"light",
+			"navbar",
+			"map",
+			"byebug",
+			"@entry",
+			"category",
+			"categ",
+			"expec",
+			"categor",
+			"users#",
+			"should",
+			"create",
+			"<div class=\"field\">",
+			"linear",
+			"cat ab",
+			"worker-inf",
+			"img",
+			"col-left",
+			".fa",
+			"{\n",
+			".fa",
+			"fa",
+			".fa",
+			"=\"\"",
+			"iframe",
+			"img",
+			"iframe",
+			"0.8s",
+			"../../dist/",
+			":hover",
+			"navbar-l",
+			"\na {\n	transition: all 0.2s linear 0s;\n}",
+			"  Lorem Ipsum is simply dummy text of the printing and typesetting industry. ",
+			"map",
+			"summary",
+			"Summary",
+			"summary",
+			"\n.choose-buttons a:hover {\n	top: 2px;\n}",
+			"d3",
+			"random",
+			"'",
+			"name",
+			"'",
+			", u\"",
+			"'",
+			"parameterIsFound",
+			"parseCompanyPage",
+			"for",
+			"beer",
+			"favorite",
+			"beer",
+			".show",
+			"gem 'jquery-turbolinks'",
+			"	<%=",
+			"%>",
+			"<%=",
+			"			",
+			"merituule",
+			"O",
+			"rspec",
+			"user",
+			"http://fonts.gstatic.com/s/opensans/v10/",
+			"config",
+			"assets",
+			"apache.maven",
+			"1.20",
+			"1.2.0",
+			"1.20",
+			"ready",
+			"init",
+			"older",
+			"getDate",
+			"date",
+			"menu",
+			"menu-but",
+			"menu-bu",
+			"2014",
+			".toggle(speed)",
+			"toggle",
+			"isreust",
+			"menu-url",
+			".toggle(speed)",
+			"toggle",
+			".restaurant",
+			"window",
+			"100px",
+			"<?php",
+			"kumpula",
+			"doStuff",
+			"Keskusta",
+			"h4",
+			"select",
+			"h3",
+			"h4",
+			"cover",
+			"rgb(0,190,235)",
+			"rgb(0,210,255)",
+			"contact",
+			"skills",
+			"rgb",
+			"open san",
+			"cover",
+			"min-he",
+			"cover",
+			"text-alig",
+			"text-tra",
+			"p {",
+			"name"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"@parina_drink.",
+			"object",
+			"<div class=\"form-group\">",
+			"ease-in-out",
+			"2s",
+			"",
+			"balls",
+			"Balls",
+			"d2",
+			"\"",
+			", \"",
+			"\"",
+			"self.parameterIsFound",
+			"	<li><%=",
+			"%></li>",
+			"<li><%=",
+			"",
+			"fonts/",
+			".slideToggle(speed)",
+			"slideToggle",
+			"rgb(0,190,210)",
+			"rgb(0,190,235)"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/home/jonnehuo/ruby/parina/app/models/rating.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 872,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								391,
+								391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/jonnehuo/ruby/parina/app/views/ratings/index.html.erb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2818,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1894,
+								1894
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1263.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/jonnehuo/ruby/parina/app/assets/stylesheets/application.css.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								954,
+								954
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/jonnehuo/ruby/parina/app/controllers/ratings_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1743,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1182,
+								1182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 184.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "parina.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 315.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

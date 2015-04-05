@@ -2,10 +2,18 @@
 	<h1><%= @year %> / <%= @month %></h1>
 </div>
 
-<div class="col-md-6">
-	<%= render 'category_table', categories: @categories %>
+
+<div class="col-md-3">
+	<h3>Outcome</h3>
+	<%= render 'total_table', categories: @categories['outcome'] %>
+</div>
+
+<div class="col-md-3">
+	<h3>Income</h3>
+	<%= render 'total_table', categories: @categories['income'] %>
 </div>
 
 <div class="col-md-12">
+	<h3>List of entries</h3>
 	<%= render 'table' %>
 </div>

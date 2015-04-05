@@ -1,0 +1,15 @@
+<div class="col-md-12">
+	<h1>Statistics</h1>
+</div>
+
+
+<div class="col-md-4">
+	<h3>Total outcome</h3>
+	<%= render 'total_table', categories: @total_stats['outcome'] %>
+</div>
+
+<div class="col-md-4">
+	<h3>Total income</h3>
+	<%= render 'total_table', categories: @total_stats['income'] %>
+</div>
+

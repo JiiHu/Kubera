@@ -25,6 +25,7 @@
 	});
 </script>
 
+<% unless @views.empty? %>
 <div class="col-md-4">
 	<h4>View entries by month</h4>
 	<%= form_tag do %>
@@ -36,3 +37,4 @@
 		</div>
 	<% end %>
 </div>
+<% end %>

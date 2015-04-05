@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   resources :categories
 
   resources :users
+  get '/user', to: 'users#show', as: :current_user
   
   resource :session, only: [:new, :create, :delete]
   get 'signup', to: 'users#new'
   get 'login', to: 'sessions#new'
   get 'logout', to: 'sessions#destroy'
+
+  get 'stats', to: 'entries#stats'
 
   get 'entries/:year/:month', to: 'entries#view', as: :view_entries
   
