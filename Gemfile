@@ -5,6 +5,9 @@ ruby '2.2.0'
 # to fix unknown error
 gem 'rb-readline'
 
+# charts
+gem "chartkick"
+
 # for has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 

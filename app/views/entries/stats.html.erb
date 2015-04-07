@@ -2,7 +2,6 @@
 	<h1>Statistics</h1>
 </div>
 
-
 <div class="col-md-4">
 	<h3>Total outcome</h3>
 	<%= render 'total_table', categories: @total_stats['outcome'] %>
@@ -12,4 +11,14 @@
 	<h3>Total income</h3>
 	<%= render 'total_table', categories: @total_stats['income'] %>
 </div>
+
+<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+
+<div class="col-md-12">
+	<h3>Data by month</h3>
+	<%= line_chart @lines_income %>
+</div>
+
+
 

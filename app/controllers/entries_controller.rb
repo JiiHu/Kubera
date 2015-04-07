@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   before_action :ensure_that_signed_in
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_correct_user, only: [:show, :edit, :update, :destroy]
-  before_action :categories_to_form, only: [:new, :edit, :create]
+  before_action :current_users_categories, only: [:new, :edit, :create]
   before_action :categories_is_not_empty, only: [:new]
 
   def view
@@ -18,6 +18,9 @@ class EntriesController < ApplicationController
 
   def stats
     @total_stats = stats_from_entries(Entry.where user:current_user)
+    @lines_income = []
+
+    generate_chart_data_from_all_categories
   end
 
 
@@ -25,7 +28,7 @@ class EntriesController < ApplicationController
   # GET /entries.json
   def index
     @entries = Entry.where user:current_user
-    @views = list_months
+    @views = list_month_urls
   end
 
   # GET /entries/1
@@ -66,6 +69,84 @@ class EntriesController < ApplicationController
   end
 
   private
+
+    def current_users_categories
+      @categories = Category.where user:current_user
+    end
+
+    def generate_chart_data_from_all_categories  
+      oldest = users_oldest_entrys_date
+  
+      Category.where(user:current_user).each do |c|
+        date = users_newest_entrys_date
+        list = {}
+
+        go_through_all_entries_on_category(date, oldest, list)
+        
+        chart = {}
+        chart['name'] = c.name
+        chart['data'] = list
+
+        @lines_income << chart
+      end
+    end
+
+    def go_through_all_entries_on_category(date, oldest, list)
+      while date >= (oldest - 1.month)
+        list[date] = 0
+
+        entries = Entry.where(date: Date.new(date.year, date.month).all_month, user:current_user)
+        entries.each do |e|
+          list[date] += e.amount.to_f
+        end
+
+        date = date - 1.month
+      end
+    end
+
+    def stats_from_entries(entries)
+      stats, stats['income'], stats['outcome'] = {}, {}, {}
+
+      stats['income']['Total'], stats['outcome']['Total'] = 0, 0
+      Category.where(user:current_user).each do |c|
+        in_out = c.income? ? 'income' : 'outcome'
+        stats[in_out][c] = 0 if stats[in_out][c].nil?
+
+        total = total_from_categories(entries.where category:c)
+        stats[in_out][c] += total
+        stats[in_out]['Total'] += total
+      end
+      return stats
+    end
+
+    def total_from_categories(entries)
+      total = 0
+      entries.each do |e|
+        total += e.amount
+      end
+      return total
+    end
+
+    def list_month_urls
+      return {} if Entry.where(user:current_user).empty?
+      oldest = users_oldest_entrys_date
+      date = users_newest_entrys_date
+
+      prefix = '/entries/'
+
+      list = {}
+      while date >= oldest - 1.month
+        month = date.month
+        year = date.year.to_s
+        tag = year + ' ' + Date::MONTHNAMES[month]
+        url = prefix + year + '/' + month.to_s
+        list[tag] = url
+        date = date - 1.month
+      end
+      
+      return list
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
       @entry = Entry.find(params[:id])
@@ -90,53 +171,14 @@ class EntriesController < ApplicationController
       return @entry.category.user == current_user
     end
 
-    def categories_to_form
-      @categories = Category.where user:current_user
+    def users_oldest_entrys_date
+      Entry.where(user:current_user).order('date DESC').last.date
     end
 
-    def stats_from_entries(entries)
-      stats = {}
-      stats['income'] = {}
-      stats['outcome'] = {}
-
-      stats['income']['Total'] = 0
-      stats['outcome']['Total'] = 0
-      Category.where(user:current_user).each do |c|
-        in_out = c.income? ? 'income' : 'outcome'
-        stats[in_out][c] = 0 if stats[in_out][c].nil?
-        total = total_from_categories(entries.where category:c)
-        stats[in_out][c] += total
-        stats[in_out]['Total'] += total
-      end
-      return stats
+    def users_newest_entrys_date
+      newest = Entry.where(user:current_user).order('date DESC').first.date
+      return newest if Date.today < newest
+      Date.today
     end
-
-    def total_from_categories(entries)
-      total = 0
-      entries.each do |e|
-        total += e.amount
-      end
-      return total
-    end
-
-    def list_months
-      return {} if Entry.where(user:current_user).empty?
-      oldest = Entry.where(user:current_user).order('date DESC').last.date
-      date = Date.today
-      prefix = '/entries/'
-
-      list = {}
-      while date >= oldest 
-        month = date.month
-        year = date.year.to_s
-        tag = year + ' ' + Date::MONTHNAMES[month]
-        url = prefix + year + '/' + month.to_s
-        list[tag] = url
-        date = date - 1.month
-      end
-      
-      return list
-    end
-
 
 end
