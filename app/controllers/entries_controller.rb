@@ -81,7 +81,7 @@ class EntriesController < ApplicationController
         date = users_newest_entrys_date
         list = {}
 
-        go_through_all_entries_on_category(date, oldest, list)
+        go_through_all_entries_on_category(c, date, oldest, list)
         
         chart = {}
         chart['name'] = c.name
@@ -91,11 +91,11 @@ class EntriesController < ApplicationController
       end
     end
 
-    def go_through_all_entries_on_category(date, oldest, list)
+    def go_through_all_entries_on_category(category, date, oldest, list)
       while date >= (oldest - 1.month)
         list[date] = 0
 
-        entries = Entry.where(date: Date.new(date.year, date.month).all_month, user:current_user)
+        entries = Entry.where(category:category, date: Date.new(date.year, date.month).all_month, user:current_user)
         entries.each do |e|
           list[date] += e.amount.to_f
         end
