@@ -1,8 +1,11 @@
 <%# add navigation links to this file %>
 
-<% if current_user.nil? %>
+<% if current_page?(root_url) && current_user.nil? %>
 	<li class="jumbo-link"><%= link_to 'Signup', signup_path %></li>
 	<li class="jumbo-link"><%= link_to 'Log in', login_path %></li>
+<% elsif current_user.nil? %>
+	<li class="jumbo-link link-dark"><%= link_to 'Signup', signup_path %></li>
+	<li class="jumbo-link link-dark"><%= link_to 'Log in', login_path %></li>
 <% else %>
 	<li><%= link_to 'Entries', entries_path %></li>
 	<li><%= link_to 'Categories', categories_path %></li>

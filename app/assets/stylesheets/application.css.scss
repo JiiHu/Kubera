@@ -86,6 +86,7 @@ a:hover {
 	transition: all 0.2s ease-in-out 0s;
 }
 a,
+a:hover,
 a:visited {
 	color: #444;
 }
@@ -118,6 +119,12 @@ a.navbar-brand:hover {
 .navbar-fixed-top {
     background: #fff;
     border-bottom: 3px solid #ededed;
+}
+
+.navbar-fixed-top li a {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 11px;
 }
 
 /* BUTTONS */ 
@@ -192,6 +199,9 @@ li.jumbo-link a {
 	color: #eee;
 	font-weight: 700;
 	text-transform: uppercase;
+}
+li.jumbo-link.link-dark a {
+	color: $dark-text;
 }
 li.jumbo-link a:hover {
 	background-color: transparent;
