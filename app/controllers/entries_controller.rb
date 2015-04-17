@@ -172,6 +172,7 @@ class EntriesController < ApplicationController
     end
 
     def users_oldest_entrys_date
+      return nil if Entry.where(user:current_user).empty?
       Entry.where(user:current_user).order('date DESC').last.date
     end
 
