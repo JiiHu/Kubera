@@ -10,8 +10,8 @@
     <% categories.each do |category| %>
       <tr>
         <td><%= link_to category, category, class:"anchor" %></td>
-        <td><%= link_to 'Edit', edit_category_path(category), class:"btn btn-primary btn-new" %></td>
-        <td><%= link_to 'Destroy', category, class:"btn btn-danger btn-new", method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_category_path(category), class:"btn btn-primary btn-new btn-sm" %></td>
+        <td><%= link_to 'Destroy', category, class:"btn btn-danger btn-new btn-sm", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
