@@ -7,9 +7,9 @@ Ruby on rails application to manage your income and outcome. Named after the Lor
 [![Test Coverage](https://codeclimate.com/github/JiiHu/Kubera/badges/coverage.svg)](https://codeclimate.com/github/JiiHu/Kubera)
 
 ## What?
-Mark all your income and outcome to this app by the category they belong to (food, gasoline etc.). You will be able to see what categories eat all your money.
+Mark all your income and outcome to this app by the category they belong to (food, gasoline etc.). After a while you are able to see what categories eat all your money and from where it all comes.
 
-## Where
+## Where?
 [Hosted at Heroku](http://kubera-app.herokuapp.com/)
 
 ## How to use?
