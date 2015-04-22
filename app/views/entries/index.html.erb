@@ -30,7 +30,7 @@
 	<h4>View entries by month</h4>
 	<%= form_tag do %>
 		<div class="field">
-			<%= select_tag :entry_view, options_from_collection_for_select(@views, :last, :first, @views.min), { id:"entry-view-select", class:"form-control", size:5 } %>
+			<%= select_tag :entry_view, options_from_collection_for_select(@views, :last, :first, @views.first), { id:"entry-view-select", class:"form-control", size:5 } %>
 		</div>
 		<div class="field">
 			<%= submit_tag 'View', id:"entry-view-submit", class:"btn btn-new btn-success" %>

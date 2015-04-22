@@ -3,14 +3,16 @@
 </div>
 
 
-<div class="col-md-3">
+<div class="col-md-4">
 	<h3>Outcome</h3>
-	<%= render 'total_table', categories: @categories['outcome'] %>
+	<%= render 'total_table', categories: @categories['outcome'], total: @categories['total']['outcome'] %>
+	<%= pie_chart @categories['outcome'] %>
 </div>
 
-<div class="col-md-3">
+<div class="col-md-4">
 	<h3>Income</h3>
-	<%= render 'total_table', categories: @categories['income'] %>
+	<%= render 'total_table', categories: @categories['income'], total: @categories['total']['income'] %>
+	<%= pie_chart @categories['income'] %>
 </div>
 
 <div class="col-md-12">

@@ -3,10 +3,14 @@
 		<th>Name</th>
 		<th>Total</th>
 	</tr>
+	<tr>
+		<td><b>All together</b></td>
+		<td><b><%= total %></b> &euro;</td>
+	</tr>
 <% categories.each do |c, v| %>
 	<tr>
 		<td><%= c %></td>
-		<td><%= v %></td>
+		<td><%= v %> &euro;</td>
 	</tr>
 <% end %>
 </table>

@@ -105,17 +105,18 @@ class EntriesController < ApplicationController
     end
 
     def stats_from_entries(entries)
-      stats, stats['income'], stats['outcome'] = {}, {}, {}
+      stats, stats['income'], stats['outcome'], total = {}, {}, {}, {}
 
-      stats['income']['Total'], stats['outcome']['Total'] = 0, 0
+      total['income'], total['outcome'] = 0, 0
       Category.where(user:current_user).each do |c|
         in_out = c.income? ? 'income' : 'outcome'
         stats[in_out][c] = 0 if stats[in_out][c].nil?
 
-        total = total_from_categories(entries.where category:c)
-        stats[in_out][c] += total
-        stats[in_out]['Total'] += total
+        category_total = total_from_categories(entries.where category:c)
+        stats[in_out][c] += category_total
+        total[in_out] += category_total
       end
+      stats['total'] = total
       return stats
     end
 
