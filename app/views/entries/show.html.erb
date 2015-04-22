@@ -1,20 +1,15 @@
-<h1>Entry #<%= @entry.id %></h1>
-
-<h3>
-  <%= @entry.amount %> &euro;
-</h3>
-
-<h3>
-  <%= @entry.date %>
-  <small>
-  Thats 
-  <%= time_ago_in_words(@entry.date) %>
-  ago
-  </small>
-</h3>
-
-<h4>
-  <%= link_to @entry.category, @entry.category, class:"anchor" %>
-</h4>
-
-<%= link_to 'Edit', edit_entry_path(@entry), class:"btn btn-primary btn-new" %>
+<p class="story">
+Entry with 
+<b>#<%= @entry.id %></b> 
+was worth of 
+<b><%= @entry.amount %> &euro;</b> 
+and it was made at 
+<b><%= @entry.date %></b> 
+which is about 
+<b><%= time_ago_in_words(@entry.date) %> 
+ago</b>. Entry belongs to category called 
+<%= link_to @entry.category, @entry.category, class:"anchor" %>. 
+If you see something incorrect here, please 
+<%= link_to 'Edit', edit_entry_path(@entry), class:"btn btn-primary btn-new" %> 
+false information away.
+</p>

@@ -7,10 +7,10 @@
 		<td><b>All together</b></td>
 		<td><b><%= total %></b> &euro;</td>
 	</tr>
-<% categories.each do |c, v| %>
+<% categories.each do |cat, amount| %>
 	<tr>
-		<td><%= c %></td>
-		<td><%= v %> &euro;</td>
+		<td><%= link_to cat, cat, class:"anchor" %></td>
+		<td><%= amount %> &euro;</td>
 	</tr>
 <% end %>
 </table>
