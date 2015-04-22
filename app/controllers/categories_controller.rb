@@ -16,6 +16,7 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     @entries = Entry.where category:@category
+    @average = average_for_category(@category)
   end
 
   # GET /categories/new
@@ -54,6 +55,13 @@ class CategoriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])
+    end
+
+
+    def average_for_category(category)
+      entries = Entry.where user:current_user, category:category
+      avg = entries.average(:amount).to_f
+      return avg.round(2)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

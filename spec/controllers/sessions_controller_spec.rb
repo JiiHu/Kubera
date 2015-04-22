@@ -33,9 +33,9 @@ describe SessionsController do
     describe "with valid params" do 
       it "creates user session" do
         params = {"username"=>"jonne", "password"=>"eses","password_confirmation"=>"eses"}
-        post :create, user:params
+        post :create, params
         user = User.find_by username:"jonne"
-        expect(session[:user_id]).not_to eq(user.id)
+        expect(session[:user_id]).to eq(user.id)
       end
     end
 

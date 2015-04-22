@@ -31,4 +31,9 @@ module CommonMethods
     end
   end
 
+
+  def difference_in_months(date)
+    ((Date.today - date)/30).to_f
+  end
+
 end

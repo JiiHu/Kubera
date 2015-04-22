@@ -17,7 +17,7 @@ class EntriesController < ApplicationController
 
 
   def stats
-    @total_stats = stats_from_entries(Entry.where user:current_user)
+    @total_stats = stats_from_entries(users_entries)
     @lines_income = []
 
     generate_chart_data_from_all_categories
@@ -27,7 +27,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.where user:current_user
+    @entries = users_entries
     @views = list_month_urls
   end
 
@@ -119,6 +119,7 @@ class EntriesController < ApplicationController
       return stats
     end
 
+
     def total_from_categories(entries)
       total = 0
       entries.each do |e|
@@ -150,6 +151,10 @@ class EntriesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
       @entry = Entry.find(params[:id])
+    end
+
+    def users_entries
+      Entry.where user:current_user
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

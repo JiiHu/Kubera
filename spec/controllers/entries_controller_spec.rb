@@ -25,6 +25,16 @@ describe EntriesController do
   end
 
 
+  describe "GET #stats" do
+
+    before(:each) { get :stats }
+
+    it "renders the #stats view" do
+      expect(response).to render_template(:stats)
+    end
+  end
+
+
   describe "GET #view" do
     before(:each) { get :view, year:2015, month:3 }
 
